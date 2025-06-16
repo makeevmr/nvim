@@ -2,32 +2,32 @@ vim.o.background = "dark" -- or "light" for light mode
 
 
 -- setup must be called before loading the colorscheme
--- Gruvbox
+-- gruvbox
 require("gruvbox").setup({
-    undercurl = true,
-    underline = true,
-    bold = true,
-    italic = {
-        strings = false,
-        comments = false,
-        operators = false,
-        folds = false,
-    },
-    strikethrough = true,
-    invert_selection = false,
-    invert_signs = false,
-    invert_tabline = false,
+	undercurl = true,
+	underline = true,
+	bold = true,
+	italic = {
+		strings = false,
+		comments = false,
+		operators = false,
+		folds = false,
+	},
+	strikethrough = true,
+	invert_selection = false,
+	invert_signs = false,
+	invert_tabline = false,
     invert_intend_guides = false,
     inverse = true, -- invert background for search, diffs, statuslines and errors
     contrast = "hard", -- can be "hard", "soft" or empty string
-    palette_overrides = {
-        dark0_hard = "#000000",
+	palette_overrides = {
+       dark0_hard = "#000000",
     },
-    overrides = {
+	overrides = {
         ["@lsp.type.property.cpp"] = {fg = "#89C07C"},
     },
-    dim_inactive = false,
-    transparent_mode = false,
+	dim_inactive = false,
+	transparent_mode = false,
 })
 
 -- rose-pine
@@ -80,10 +80,10 @@ require("gruvbox").setup({
 --         h6 = "foam",
 --     },
 --
+--     -- Override the builtin palette per variant
 --     palette = {
---         -- Override the builtin palette per variant
 --         main = {
---             base = '#000000',
+--             base = "#000000",
 --         }
 --         -- moon = {
 --         --     base = '#18191a',
@@ -92,12 +92,18 @@ require("gruvbox").setup({
 --     },
 --
 --     highlight_groups = {
+--         -- For new delete sizeof operators
 --         ["@keyword.operator"] = {fg = "#EB6F92"},
+--         -- To highlight class memeber fileds with different colour
 --         ["@property"] = {fg = "#6FDEB5"},
+--         ["@variable.member.cpp"] = {fg = "#6FDEB5"},
+--         -- Fix namespace colors
+--         ["@module"] = {fg = "foam"},
 --     },
 --
---     -- before_highlight = function(group, highlight, palette)
---     -- end,
+--     before_highlight = function(group, highlight, palette)
+--         vim.api.nvim_set_hl(0, "Visual", { bg = "#403D52" })
+--     end,
 -- })
 
 vim.cmd("colorscheme gruvbox")

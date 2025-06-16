@@ -1,6 +1,6 @@
 require'nvim-treesitter.configs'.setup {
 	-- A list of parser names, or "all" (the five listed parsers should always be installed)
-	ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "cpp", "make", "cmake", "markdown", "python"},
+	ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "cpp", "make", "cmake", "markdown", "latex", "python", "rust"},
 
 	-- Install parsers synchronously (only applied to `ensure_installed`)
 	sync_install = false,
@@ -22,6 +22,6 @@ require'nvim-treesitter.configs'.setup {
 	-- disable highlighting for the `tex` filetype, you need to include `latex` in this list as this is
 	-- the name of the parser)
 	-- list of language that will be disabled
-	disable = { "rust" },
+	-- disable = { "rust" },
 	},
 }

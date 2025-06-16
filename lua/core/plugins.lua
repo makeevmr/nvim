@@ -47,6 +47,7 @@ require("lazy").setup({
         { "hrsh7th/cmp-buffer" },
         { "hrsh7th/cmp-path" },
         { "hrsh7th/cmp-cmdline" },
+        { "hrsh7th/nvim-cmp" },
     },
     -- For files and text search (https://github.com/nvim-telescope/telescope.nvim)
     {
@@ -58,16 +59,17 @@ require("lazy").setup({
     {
         'windwp/nvim-autopairs'
     },
-    -- Better bracket support (https://github.com/kylechui/nvim-surround) 
+    -- Surround (https://github.com/kylechui/nvim-surround)
     {
         'kylechui/nvim-surround'
     },
     -- Comments (https://github.com/terrortylor/nvim-comment)
     {
-        'numToStr/Comment.nvim'
+        {'numToStr/Comment.nvim'}
     },
     -- Git support (https://github.com/lewis6991/gitsigns.nvim)
     {
         'lewis6991/gitsigns.nvim'
     },
+    -- Dev container (https://github.com/debdutdeb/devcontainer.nvim)
 })

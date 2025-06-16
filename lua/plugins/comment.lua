@@ -4,3 +4,4 @@ require('Comment').setup({
     },
     lazy = false,
 })
+

@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 
 -- NeoTree
-vim.keymap.set('n', '<leader>t', ':Neotree focus<CR>'); -- Open NeoTree
+vim.keymap.set('n', '<leader>t', ':Neotree focus<CR>');      -- Open NeoTree
 vim.keymap.set('n', '<leader>g', ':Neotree git_status<CR>'); -- Git stauts window
 -- vim.keymap.set('n', '<leader>g', ':Neotree buffers<CR>'); -- Show a list of currently open buffers.
 ------------------------------------------------------------
@@ -86,10 +86,9 @@ keymap("v", "<leader>p", "\"_dP", opts)
 keymap("n", "<C-u>", "<C-u>zz", opts)
 keymap("n", "<C-d>", "<C-d>zz", opts)
 
--- Bufferline keymaps
+-- Buffer keymaps
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<leader>bc", ":BufferLinePickClose<CR>", opts)
 
 -- Tabs keymaps
 -- keymap("n", "<leader>h", ":tabprevious<CR>", opts)

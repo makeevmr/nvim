@@ -16,7 +16,10 @@ vim.opt.clipboard = "unnamedplus"                   -- Copy/paste to system clip
 vim.opt.swapfile = false                            -- Don't use swapfile
 vim.opt.completeopt = 'menuone,noinsert,noselect'   -- Autocomplete options
 vim.opt.fileencoding = "utf-8"                      -- The encoding written to a file
-vim.lsp.set_log_level("off")                        -- Disalbe lsp log file
+vim.lsp.set_log_level("off")                        -- Disable LSP client log
+-- vim.highlight.priorities.semantic_tokens = 99       -- Lower semantic tokens priority
+
+
 
 -----------------------------------------------------------
 -- No end of file when saving
@@ -28,25 +31,25 @@ vim.g.noeol = true
 -----------------------------------------------------------
 -- Neovim UI
 -----------------------------------------------------------
----
-vim.opt.number = false                      -- Set numbered lines
-vim.opt.showmatch = true                    -- Highlight matching parenthesis
-vim.opt.foldmethod = 'marker'               -- Enable folding (default 'foldmarker')
-vim.opt.splitright = true                   -- Vertical split to the right
-vim.opt.splitbelow = true                   -- Horizontal split to the bottom
-vim.opt.ignorecase = true                   -- Ignore case letters when search
-vim.opt.smartcase = true                    -- Ignore lowercase for the whole pattern
-vim.opt.linebreak = true                    -- Wrap on word boundary
-vim.opt.termguicolors = true                -- Enable 24-bit RGB colors
-vim.opt.laststatus = 3                      -- Set global statusline
-vim.opt.undofile = true                     -- Enable persistent undo
-vim.opt.wrap = true                         -- Display lines as one long line
-vim.opt.linebreak = true                    -- Companion to wrap, don't split words
-vim.opt.cursorline = true                   -- Highlight cursorline
-vim.opt.colorcolumn = '81'                  -- Line lenght marker at 81 columns
-vim.wo.number = true                        -- Hybrid number lines
-vim.wo.relativenumber = true                -- Hybrid number lines
-vim.opt.guicursor = "n-v-i-c:block-Cursor"  -- Block cursor
+vim.opt.number = false                         -- Set numbered lines
+vim.opt.showmatch = true                       -- Highlight matching parenthesis
+vim.opt.foldmethod = 'marker'                  -- Enable folding (default 'foldmarker')
+vim.opt.splitright = true                      -- Vertical split to the right
+vim.opt.splitbelow = true                      -- Horizontal split to the bottom
+vim.opt.ignorecase = true                      -- Ignore case letters when search
+vim.opt.smartcase = true                       -- Ignore lowercase for the whole pattern
+vim.opt.linebreak = true                       -- Wrap on word boundary
+vim.opt.termguicolors = true                   -- Enable 24-bit RGB colors
+vim.opt.laststatus = 3                         -- Set global statusline
+vim.opt.undofile = true                        -- Enable persistent undo
+vim.opt.wrap = true                            -- Display lines as one long line
+vim.opt.linebreak = true                       -- Companion to wrap, don't split words
+vim.opt.cursorline = true                      -- Highlight cursor line
+-- vim.opt.colorcolumn = '101'                    -- Line lenght marker at 100 columns
+vim.opt.colorcolumn = '81'                     -- Line lenght marker at 81 columns
+vim.wo.number = true                           -- Hybrid number lines
+vim.wo.relativenumber = true                   -- Hybrid number lines
+vim.opt.guicursor = "n-v-i-c:block-Cursor"     -- Block cursorim.wo.relativenumber = true
 
 -----------------------------------------------------------
 -- Tabs, indent
@@ -66,7 +69,7 @@ vim.opt.hidden = true           -- Enable background buffers
 vim.opt.history = 100           -- Remember N lines in history
 vim.opt.lazyredraw = true       -- Faster scrolling
 vim.opt.synmaxcol = 240         -- Max column for syntax highlight
-vim.opt.updatetime = 200        -- ms to wait for trigger an event
+vim.opt.updatetime = 250        -- Ms to wait for trigger an event
 
 -----------------------------------------------------------
 -- Font
@@ -85,7 +88,7 @@ vim.opt.shortmess:append "c"        -- Don't give |ins-completion-menu| messages
 vim.opt.iskeyword:append "-"        -- Hyphenated words recognized by searches
 
 -----------------------------------------------------------
--- Highlight on yank
+-- Highlight text on yank
 -----------------------------------------------------------
 vim.api.nvim_create_autocmd('TextYankPost', {
   group = vim.api.nvim_create_augroup('highlight_yank', {}),
@@ -96,36 +99,36 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
- -- Disable builtin plugins
- local disabled_built_ins = {
-    "2html_plugin",
-    "getscript",
-    "getscriptPlugin",
-    "gzip",
-    "logipat",
-    "netrw",
-    "netrwPlugin",
-    "netrwSettings",
-    "netrwFileHandlers",
-    "matchit",
-    "tar",
-    "tarPlugin",
-    "rrhelper",
-    "spellfile_plugin",
-    "vimball",
-    "vimballPlugin",
-    "zip",
-    "zipPlugin",
-    "tutor",
-    "rplugin",
-    "synmenu",
-    "optwin",
-    "compiler",
-    "bugreport",
-    "ftplugin",
- }
- 
- for _, plugin in pairs(disabled_built_ins) do
-    g["loaded_" .. plugin] = 1
- end
- 
+-- Disable builtin plugins
+local disabled_built_ins = {
+   "2html_plugin",
+   "getscript",
+   "getscriptPlugin",
+   "gzip",
+   "logipat",
+   "netrw",
+   "netrwPlugin",
+   "netrwSettings",
+   "netrwFileHandlers",
+   "matchit",
+   "tar",
+   "tarPlugin",
+   "rrhelper",
+   "spellfile_plugin",
+   "vimball",
+   "vimballPlugin",
+   "zip",
+   "zipPlugin",
+   "tutor",
+   "rplugin",
+   "synmenu",
+   "optwin",
+   "compiler",
+   "bugreport",
+   "ftplugin",
+}
+
+for _, plugin in pairs(disabled_built_ins) do
+   g["loaded_" .. plugin] = 1
+end
+
