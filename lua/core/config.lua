@@ -99,6 +99,14 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     end,
 })
 
+-----------------------------------------------------------
+-- Load project specific config
+-----------------------------------------------------------
+local project_config = vim.fn.getcwd() .. "/.nvim.lua"
+if vim.fn.filereadable(project_config) == 1 then
+    dofile(project_config)
+end
+
 -- Disable builtin plugins
 local disabled_built_ins = {
     "2html_plugin",
