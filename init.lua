@@ -11,6 +11,7 @@ require('plugins.autopairs')  -- Autopair brackets support
 require('plugins.cmp')        -- Autocompletion
 require('plugins.comment')    -- Comments support
 require('plugins.gitsigns')   -- Git support
+require('plugins.harpoon')    -- For better file navigation
 require('plugins.lsp')        -- For errors highlighting, go to defenition, references, format and so on
 require('plugins.surround')   -- Better work with brackets
 require('plugins.neotree')    -- Files tree

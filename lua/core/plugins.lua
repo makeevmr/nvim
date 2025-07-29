@@ -71,5 +71,10 @@ require("lazy").setup({
     {
         'lewis6991/gitsigns.nvim'
     },
-    -- Dev container (https://github.com/debdutdeb/devcontainer.nvim)
+    -- For better file navigation
+    {
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+        dependencies = { "nvim-lua/plenary.nvim" }
+    },
 })
