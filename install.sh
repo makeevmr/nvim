@@ -23,6 +23,7 @@ wget https://apt.llvm.org/llvm.sh
 chmod +x llvm.sh
 ./llvm.sh 20
 ln -s /usr/bin/clang-20 /usr/local/bin/clang
+ln -s /usr/bin/clang++-20 /usr/local/bin/clang++
 ln -s /usr/bin/clangd-20 /usr/local/bin/clangd
 rm llvm.sh
 
@@ -30,7 +31,7 @@ rm llvm.sh
 apt-get install -y xclip
 
 # NEOVIM
-wget https://github.com/neovim/neovim/releases/download/stable/nvim-macos-x86_64.tar.gz
+wget https://github.com/neovim/neovim/releases/download/stable/nvim-linux-x86_64.tar.gz
 tar xzvf nvim-linux-x86_64.tar.gz
 ln -s "${INSTALL_DIR}nvim-linux-x86_64/bin/nvim" /usr/local/bin/nvim
 apt-get install -y python3-venv
