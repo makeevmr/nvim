@@ -4,7 +4,7 @@
 # AUTHOR: Artem Makeev
 
 # install directory
-INSTALL_DIR="/root/"
+INSTALL_DIR="/root/nvim_docker/"
 
 echo "Running Docker container setup..."
 
