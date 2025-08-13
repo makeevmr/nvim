@@ -77,4 +77,11 @@ require("lazy").setup({
         branch = "harpoon2",
         dependencies = { "nvim-lua/plenary.nvim" }
     },
+    -- For easy lsp installation
+    {
+        "mason-org/mason.nvim",
+    },
+    {
+        "mason-org/mason-lspconfig.nvim"
+    },
 })
