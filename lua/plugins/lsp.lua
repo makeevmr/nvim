@@ -1,5 +1,17 @@
 local lspconfig = require('lspconfig')
 
+-- Disable snittpes
+require('cmp').setup {
+    sources = {
+        {
+            name = "nvim_lsp",
+            entry_filter = function(entry)
+                return require("cmp").lsp.CompletionItemKind.Snippet ~= entry:get_kind()
+            end
+        },
+    }
+}
+
 -- clangd LSP config (C++)
 lspconfig.clangd.setup {
     cmd = {
