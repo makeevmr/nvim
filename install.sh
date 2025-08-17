@@ -18,7 +18,7 @@ cd "$INSTALL_DIR"
 rm -rf "${INSTALL_DIR}.config"
 apt-get update
 
-apt-get install -y wget curl git lsb-release software-properties-common gnupg
+apt-get install -y wget curl git lsb-release software-properties-common gnupg zip
 # wget https://apt.llvm.org/llvm.sh
 # chmod +x llvm.sh
 # ./llvm.sh 20
