@@ -4,7 +4,7 @@ require("mason-lspconfig").setup({
     -- These will be installed automatically by mason-lspconfig.
     -- Alternatively, you can leave this empty and install manually
     -- or use the ensure_installed function.
-    ensure_installed = { "clangd", "pyright", "ruff", "lua_ls", "cmake" },
+    ensure_installed = { "clangd", "pyright", "ruff", "lua_ls", "cmake", "ts_ls" },
 })
 
 -- In your nvim-lspconfig setup, you would then iterate over servers
@@ -41,6 +41,11 @@ vim.lsp.config("lua_ls", {
             },
         },
     },
+})
+
+-- Cmake lsp
+vim.lsp.config("ts_ls", {
+    capabilities = capabilities,
 })
 
 -- Cmake lsp
