@@ -14,6 +14,14 @@ export XDG_DATA_HOME="${INSTALL_DIR}.local/share"
 export XDG_STATE_HOME="${INSTALL_DIR}.local/state"
 export TERM="xterm-256color"
 
+# wget https://apt.llvm.org/llvm.sh
+# chmod +x llvm.sh
+# ./llvm.sh 20
+# ln -s /usr/bin/clang-20 /usr/local/bin/clang
+# ln -s /usr/bin/clang++-20 /usr/local/bin/clang++
+# ln -s /usr/bin/clangd-20 /usr/local/bin/clangd
+# rm llvm.sh
+
 cd "$INSTALL_DIR"
 rm -rf "${INSTALL_DIR}.config"
 apt-get update
