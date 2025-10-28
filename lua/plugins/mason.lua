@@ -11,7 +11,7 @@ require("mason-lspconfig").setup({
 -- that mason-lspconfig knows about:
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
--- clangd with custom settings
+-- C/C++ lsp
 vim.lsp.config("clangd", {
     capabilities = capabilities,
     cmd = { "clangd" },
@@ -19,7 +19,7 @@ vim.lsp.config("clangd", {
     -- on_attach = on_attach,
 })
 
--- Pyright lsp
+-- Python lsp
 vim.lsp.config("pyright", {
     capabilities = capabilities,
     filetypes = { "python" },
@@ -31,7 +31,7 @@ vim.lsp.config("pyright", {
     },
 })
 
--- lua_ls with globals
+-- Lua lsp
 vim.lsp.config("lua_ls", {
     capabilities = capabilities,
     settings = {
@@ -43,7 +43,7 @@ vim.lsp.config("lua_ls", {
     },
 })
 
--- Cmake lsp
+-- Typescript lsp
 vim.lsp.config("ts_ls", {
     capabilities = capabilities,
 })
