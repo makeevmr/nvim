@@ -24,28 +24,27 @@ export TERM="xterm-256color"
 
 cd "$INSTALL_DIR"
 rm -rf "${INSTALL_DIR}.config"
+
+# Install required dependencies such as xclip
 apt-get update
+apt-get install -y wget curl git lsb-release software-properties-common gnupg zip xclip python3-venv gcc
 
-apt-get install -y wget curl git lsb-release software-properties-common gnupg zip
-
+# Install node
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 \. "/root/.config/nvm/nvm.sh"
 unset PREFIX
 nvm install 22
 
-# XCLIP 
-apt-get install -y xclip
-
 # NEOVIM
 wget https://github.com/neovim/neovim/releases/download/stable/nvim-linux-x86_64.tar.gz
 tar xzvf nvim-linux-x86_64.tar.gz
 ln -s "${INSTALL_DIR}nvim-linux-x86_64/bin/nvim" /usr/local/bin/nvim
-apt-get install -y python3-venv
 
 # RIPGREP
 curl -LO https://github.com/BurntSushi/ripgrep/releases/download/14.1.1/ripgrep_14.1.1-1_amd64.deb
 apt-get install "./ripgrep_14.1.1-1_amd64.deb"
 
+# Delete archives
 rm nvim-linux-x86_64.tar.gz
 rm ripgrep_14.1.1-1_amd64.deb
 
