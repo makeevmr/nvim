@@ -10,6 +10,7 @@ require 'nvim-treesitter.configs'.setup {
         "lua",
         "make",
         "cmake",
+        "dockerfile",
         "vim",
         "vimdoc",
         "json",
