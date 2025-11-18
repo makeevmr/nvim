@@ -14,6 +14,8 @@ require 'nvim-treesitter.configs'.setup {
         "vim",
         "vimdoc",
         "json",
+        "yaml",
+        "toml",
         "query",
         "markdown"
     },
