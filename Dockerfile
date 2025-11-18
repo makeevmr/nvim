@@ -32,7 +32,7 @@ RUN cd "$INSTALL_DIR" && \
     rm ripgrep_14.1.1-1_amd64.deb && \
     rm -rf /var/lib/apt/lists/*
 
-# Git Repository
+# Add neovim configuration
 RUN git clone https://github.com/makeevmr/nvim "${INSTALL_DIR}.config/nvim" 
 
 # Pre-install Neovim plugins, Treesitter parsers and Mason LSPs
