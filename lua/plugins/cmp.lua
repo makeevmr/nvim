@@ -2,8 +2,24 @@ local cmp = require 'cmp'
 
 cmp.setup({
     window = {
-        -- completion = cmp.config.window.bordered(),
-        -- documentation = cmp.config.window.bordered(),
+        completion = cmp.config.window.bordered({
+            border = 'rounded',
+            winhighlight = 'Normal:CmpNormal,FloatBorder:CmpBorder,CursorLine:CmpSelection,Search:None',
+            scrollbar = true,
+        }),
+        documentation = cmp.config.window.bordered({
+            border = 'rounded',
+            winhighlight = 'Normal:CmpDocNormal,FloatBorder:CmpDocBorder',
+        }),
+    },
+    formatting = {
+        fields = { "abbr", "kind" }, -- Name first, then kind
+        format = function(_, vim_item)
+            -- Just keep the kind text, no icons
+            vim_item.kind = vim_item.kind -- Keep as-is (Method, Function, Variable, etc.)
+            vim_item.menu = nil           -- Remove menu/signature
+            return vim_item
+        end
     },
     mapping = {
         ["<C-k>"] = cmp.mapping.select_prev_item(),
@@ -23,5 +39,12 @@ cmp.setup({
         },
     }, {
         { name = 'buffer' },
-    })
+    }),
 })
+
+-- Custom highlight groups
+vim.api.nvim_set_hl(0, 'CmpNormal', { bg = '#3c3836', fg = '#ebdbb2' })
+vim.api.nvim_set_hl(0, 'CmpBorder', { bg = '#3c3836', fg = '#928374' })
+vim.api.nvim_set_hl(0, 'CmpSelection', { bg = '#504945', fg = '#ebdbb2' })
+vim.api.nvim_set_hl(0, 'CmpDocNormal', { bg = '#3c3836', fg = '#ebdbb2' })
+vim.api.nvim_set_hl(0, 'CmpDocBorder', { bg = '#3c3836', fg = '#928374' })

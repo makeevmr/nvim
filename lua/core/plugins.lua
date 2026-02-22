@@ -17,7 +17,6 @@ require("lazy").setup({
     -- File Tree (https://github.com/nvim-neo-tree/neo-tree.nvim)
     {
         "nvim-neo-tree/neo-tree.nvim",
-        branch = "v3.x",
         dependencies = {
             "nvim-lua/plenary.nvim",
             "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
@@ -52,7 +51,6 @@ require("lazy").setup({
     -- For files and text search (https://github.com/nvim-telescope/telescope.nvim)
     {
         'nvim-telescope/telescope.nvim',
-        tag = '0.1.2',
         dependencies = { 'nvim-lua/plenary.nvim' }
     },
     -- Autopairs (https://github.com/windwp/nvim-autopairs)
@@ -83,5 +81,14 @@ require("lazy").setup({
     },
     {
         "mason-org/mason-lspconfig.nvim"
+    },
+    -- Status line
+    {
+        "nvim-lualine/lualine.nvim"
+    },
+    -- Breadcrumbs for statusline
+    {
+        "SmiteshP/nvim-navic",
+        dependencies = "neovim/nvim-lspconfig"
     },
 })
