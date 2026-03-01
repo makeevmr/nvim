@@ -20,3 +20,4 @@ require('plugins.surround')   -- Better work with brackets
 require('plugins.neotree')    -- Files tree
 require('plugins.telescope')  -- File finder, grep, current buffers
 require('plugins.treesitter') -- Better syntax highlighting
+require('plugins.ibl')        -- Indent guides

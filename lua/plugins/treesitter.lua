@@ -45,3 +45,17 @@ require('nvim-treesitter').setup {
         -- disable = { "rust" },
     },
 }
+
+-- Ensure Tree-sitter starts for all installed languages (fix for b:ts_highlight not being set)
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = {
+        "c", "cpp", "python", "html", "css",
+        "javascript", "typescript", "tsx", "lua",
+        "make", "cmake", "dockerfile", "vim",
+        "vimdoc", "json", "yaml", "toml",
+        "query", "markdown"
+    },
+    callback = function()
+        vim.treesitter.start()
+    end,
+})

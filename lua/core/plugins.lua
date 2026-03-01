@@ -25,7 +25,9 @@ require("lazy").setup({
     },
     -- For better syntax syntax highlighting (https://github.com/nvim-treesitter/nvim-treesitter)
     {
-        'nvim-treesitter/nvim-treesitter'
+        'nvim-treesitter/nvim-treesitter',
+        lazy = false,
+        build = ':TSUpdate'
     },
     -- For errors visyalizstion, go to defenition and so on (https://github.com/neovim/nvim-lspconfig)
     {
@@ -91,4 +93,7 @@ require("lazy").setup({
         "SmiteshP/nvim-navic",
         dependencies = "neovim/nvim-lspconfig"
     },
+    {
+        "lukas-reineke/indent-blankline.nvim",
+    }
 })
