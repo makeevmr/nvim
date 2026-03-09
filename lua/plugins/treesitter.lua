@@ -1,26 +1,30 @@
+local supported_file_types = {
+    "c",
+    "cpp",
+    "python",
+    "html",
+    "css",
+    "javascript",
+    "typescript",
+    "tsx",
+    "lua",
+    "make",
+    "cmake",
+    "dockerfile",
+    "vim",
+    "vimdoc",
+    "json",
+    "yaml",
+    "toml",
+    "query",
+    "markdown"
+}
+
+
+
 require('nvim-treesitter').setup {
     -- A list of parser names, or "all" (the five listed parsers should always be installed)
-    ensure_installed = {
-        "c",
-        "cpp",
-        "python",
-        "html",
-        "css",
-        "javascript",
-        "typescript",
-        "tsx",
-        "lua",
-        "make",
-        "cmake",
-        "dockerfile",
-        "vim",
-        "vimdoc",
-        "json",
-        "yaml",
-        "toml",
-        "query",
-        "markdown"
-    },
+    ensure_installed = supported_file_types,
 
     -- Install parsers synchronously (only applied to `ensure_installed`)
     sync_install = false,
@@ -48,13 +52,7 @@ require('nvim-treesitter').setup {
 
 -- Ensure Tree-sitter starts for all installed languages (fix for b:ts_highlight not being set)
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = {
-        "c", "cpp", "python", "html", "css",
-        "javascript", "typescript", "tsx", "lua",
-        "make", "cmake", "dockerfile", "vim",
-        "vimdoc", "json", "yaml", "toml",
-        "query", "markdown"
-    },
+    pattern = supported_file_types,
     callback = function()
         vim.treesitter.start()
     end,
