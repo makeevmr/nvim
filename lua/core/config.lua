@@ -16,7 +16,7 @@ vim.opt.clipboard = "unnamedplus"                 -- Copy/paste to system clipbo
 vim.opt.swapfile = false                          -- Don't use swapfile
 vim.opt.completeopt = 'menuone,noinsert,noselect' -- Autocomplete options
 vim.opt.fileencoding = "utf-8"                    -- The encoding written to a file
-vim.lsp.set_log_level("off")                      -- Disable LSP client log
+vim.lsp.log.set_level 'trace'                     -- Disable LSP client log
 -- vim.highlight.priorities.semantic_tokens = 99       -- Lower semantic tokens priority
 
 
@@ -97,6 +97,12 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     callback = function()
         vim.highlight.on_yank { higroup = 'IncSearch', timeout = 500 }
     end,
+})
+
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    io.stdout:write("\027[<0u")
+  end
 })
 
 -----------------------------------------------------------
