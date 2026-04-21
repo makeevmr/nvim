@@ -1,0 +1,134 @@
+[colors.bright]
+black = "#928374"
+blue = "#83a598"
+cyan = "#8ec07c"
+green = "#b8bb26"
+magenta = "#d3869b"
+red = "#fb4934"
+white = "#ebdbb2"
+yellow = "#fabd2f"
+
+[colors.normal]
+black = "#282828"
+blue = "#458588"
+cyan = "#689d6a"
+green = "#98971a"
+magenta = "#b16286"
+red = "#cc241d"
+white = "#a89984"
+yellow = "#d79921"
+
+[colors.primary]
+foreground = "#ebdbb2"
+background = "#000000"
+
+[font]
+size = 9
+builtin_box_drawing = false
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.offset]
+x = 0
+y = 0
+
+[font.bold]
+family = "JetBrainsMonoNerdFont"
+style = "Bold"
+
+[font.bold_italic]
+family = "JetBrainsMonoNerdFont"
+style = "BoldItalic"
+
+[font.normal]
+family = "JetBrainsMonoNerdFont"
+style = "Regular"
+
+# [font]
+# size = 9.5
+# builtin_box_drawing = false
+#
+# [font.glyph_offset]
+# x = 0
+# y = 0
+#
+# [font.offset]
+# x = 0
+# y = 0
+#
+# [font.bold]
+# family = "RobotoMonoNerdFont"
+# style = "Bold"
+#
+# [font.bold_italic]
+# family = "RobotoMonoNerdFont"
+# style = "BoldItalic"
+#
+# [font.normal]
+# family = "RobotoMonoNerdFont"
+# style = "Regular"
+
+# [font]
+# size = 9.5
+# builtin_box_drawing = false
+#
+# [font.glyph_offset]
+# x = 0
+# y = 0
+#
+# [font.offset]
+# x = 0
+# y = 0
+#
+# [font.normal]
+# family = "ProFontIIxNerdFontMono"
+# style = "Regular"
+
+# [font]
+# size = 11.5
+# builtin_box_drawing = false
+#
+# [font.glyph_offset]
+# x = 0
+# y = 0
+#
+# [font.offset]
+# x = 0
+# y = 0
+#
+# [font.bold]
+# family = "TerminessNerdFontMono"
+# style = "Bold"
+#
+# [font.bold_italic]
+# family = "TerminessNerdFontMono"
+# style = "BoldItalic"
+#
+# [font.normal]
+# family = "TerminessNerdFontMono"
+# style = "Regular"
+
+[scrolling]
+history = 50000
+multiplier = 3
+
+[window]
+decorations = "full"
+opacity = 1.0
+
+[window.dimensions]
+columns = 80
+lines = 30
+
+[env]
+TERM = "xterm-256color"
+COLORTERM = "truecolor"
+
+[window.padding]
+x = 0
+y = 0
+
+[selection]
+save_to_clipboard = true
