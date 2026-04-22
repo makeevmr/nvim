@@ -9,5 +9,4 @@ git@github.com:makeevmr/.dotfiles.git
 ```
 
 ## Create simlinks
-Create symlinks  
 `stow -d ~ -t ~/.config .dotfiles`
