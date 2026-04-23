@@ -37,10 +37,6 @@ require("lazy").setup({
     {
         "ellisonleao/gruvbox.nvim", priority = 1000
     },
-    -- Color scheme (https://github.com/rose-pine/neovim)
-    {
-        "rose-pine/neovim"
-    },
     -- For autocomplete visualization (https://github.com/hrsh7th/nvim-cmp)
     {
         { "hrsh7th/nvim-cmp" },
@@ -71,28 +67,29 @@ require("lazy").setup({
     {
         'lewis6991/gitsigns.nvim'
     },
-    -- For better file navigation
+    -- For better file navigation (https://github.com/ThePrimeagen/harpoon/tree/harpoon2)
     {
         "ThePrimeagen/harpoon",
         branch = "harpoon2",
         dependencies = { "nvim-lua/plenary.nvim" }
     },
-    -- For easy lsp installation
+    -- For easy lsp installation (https://github.com/mason-org/mason.nvim)
     {
         "mason-org/mason.nvim",
     },
     {
         "mason-org/mason-lspconfig.nvim"
     },
-    -- Status line
+    -- Status line (https://github.com/nvim-lualine/lualine.nvim)
     {
         "nvim-lualine/lualine.nvim"
     },
-    -- Breadcrumbs for statusline
+    -- Breadcrumbs for statusline (https://github.com/SmiteshP/nvim-navic)
     {
         "SmiteshP/nvim-navic",
         dependencies = "neovim/nvim-lspconfig"
     },
+    -- Show indent (https://github.com/lukas-reineke/indent-blankline.nvim)
     {
         "lukas-reineke/indent-blankline.nvim",
     }
