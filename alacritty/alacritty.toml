@@ -1,3 +1,4 @@
+shell = "/usr/bin/zsh"
 live_config_reload = true
 import = ["~/.dotfiles/alacritty/colors.toml"]
 
