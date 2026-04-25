@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Run with superuser
-apt update && apt install -y zsh
+sudo apt update && sudo apt install -y zsh
 chsh -s $(which zsh)
 echo 'export ZDOTDIR="$HOME/.config/zsh"' > ~/.zshenv
 
@@ -13,3 +13,5 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 # zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+rm ~/.zshrc
