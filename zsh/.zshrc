@@ -14,7 +14,8 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-zstyle ':omz:update' mode auto # update automatically without asking
+# Update automatically without asking
+zstyle ':omz:update' mode auto
 
 # Aliases
 alias set_keybright='sudo brightnessctl -d tpacpi::kbd_backlight set'
