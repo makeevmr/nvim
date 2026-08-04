@@ -4,7 +4,7 @@ Manage dotfiles with [stow](https://dev.to/crafts69guy/how-to-manage-your-dotfil
 Clone project to home directory:
 ```bash
 cd ~
-git@github.com:makeevmr/.dotfiles.git
+git clone git@github.com:makeevmr/.dotfiles.git
 ```
 
 ## Program installation
