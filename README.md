@@ -8,7 +8,7 @@ git@github.com:makeevmr/.dotfiles.git
 ```
 
 ## Program installation
-Install programs with `./install <program_name_1> <program_name_2> ...`
+Install programs with `./install.sh <program_name_1> <program_name_2> ...`
 
 Available programs:
 - alacritty
@@ -16,4 +16,4 @@ Available programs:
 - tmux
 - zsh
 
-Example: `./install alacritty zsh`
+Example: `./install.sh alacritty zsh`
