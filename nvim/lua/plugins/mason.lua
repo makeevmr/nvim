@@ -40,6 +40,14 @@ vim.lsp.config.pyright = {
     },
 }
 
+-- Python linter/formatter.
+-- Hover is disabled in favor of Pyright, see lua/plugins/lsp.lua.
+vim.lsp.config.ruff = {
+    capabilities = capabilities,
+    on_attach = on_attach,
+    filetypes = { "python" },
+}
+
 -- Lua lsp
 vim.lsp.config.lua_ls = {
     capabilities = capabilities,
@@ -66,4 +74,4 @@ vim.lsp.config.ts_ls = {
 --     filetypes = { 'cmake' },
 -- }
 
-vim.lsp.enable({ 'clangd', 'pyright', 'lua_ls', 'ts_ls' })
+vim.lsp.enable({ 'clangd', 'pyright', 'ruff', 'lua_ls', 'ts_ls' })

@@ -79,5 +79,5 @@ keymap("v", "<leader>p", "\"_dP", opts)
 keymap("x", "<A-k>", "<ESC>", opts)
 
 -- Move text up and down
-keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
+keymap("x", "J", ":move '>+1<CR>gv=gv", opts)
+keymap("x", "K", ":move '<-2<CR>gv=gv", opts)

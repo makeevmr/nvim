@@ -1,22 +1,21 @@
-local lspconfig = require('lspconfig')
-
--- Server-specific settings. See `:help lspconfig-setup`
+-- Servers are configured natively via `vim.lsp.config`/`vim.lsp.enable` in
+-- lua/plugins/mason.lua -- see `:help lsp-config`.
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 
 vim.keymap.set('n', '<leader>n', function()
     vim.diagnostic.jump({
-        count=1,
-        float=true
+        count = 1,
+        float = true
     })
-end)
-vim.keymap.set('n', '<leader>n', function()
+end, { desc = "Jump to next diagnostic" })
+vim.keymap.set('n', '<leader>p', function()
     vim.diagnostic.jump({
-        count=-1,
-        float=true
+        count = -1,
+        float = true
     })
-end)
-vim.keymap.set('n', '<leader>e', vim.diagnostic.setloclist)
+end, { desc = "Jump to previous diagnostic" })
+vim.keymap.set('n', '<leader>e', vim.diagnostic.setloclist, { desc = "Diagnostics to loclist" })
 
 
 -- Use LspAttach autocommand to only map the following keys
@@ -37,10 +36,10 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
         vim.keymap.set('n', '<leader>he', function()
             vim.lsp.inlay_hint.enable(true)
-        end, opts, { desc = "Enable LSP inlay hints" })
+        end, { buffer = ev.buf, desc = "Enable LSP inlay hints" })
         vim.keymap.set('n', '<leader>hd', function()
             vim.lsp.inlay_hint.enable(false)
-        end, opts, { desc = "Disable LSP inlay hints" })
+        end, { buffer = ev.buf, desc = "Disable LSP inlay hints" })
 
         -- vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
         -- vim.keymap.set('n', '<leader>wa', vim.lsp.buf.add_workspace_folder, opts)

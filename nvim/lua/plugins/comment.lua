@@ -1,6 +1,1 @@
-require('Comment').setup({
-    opts = {
-        -- add any options here
-    },
-    lazy = false,
-})
+require('Comment').setup()

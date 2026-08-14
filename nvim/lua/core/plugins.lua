@@ -26,6 +26,7 @@ require("lazy").setup({
     -- For better syntax syntax highlighting (https://github.com/nvim-treesitter/nvim-treesitter)
     {
         'nvim-treesitter/nvim-treesitter',
+        branch = 'main',
         lazy = false,
         build = ':TSUpdate'
     },
