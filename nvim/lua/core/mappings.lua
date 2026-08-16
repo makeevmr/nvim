@@ -65,12 +65,6 @@ keymap("v", "<A-k>", "<ESC>", opts)
 keymap("v", "<S-Tab>", "<gv", opts)
 keymap("v", "<Tab>", ">gv", opts)
 
--- Add surrounding characters to text
-keymap("v", "<leader>(", "c()<Esc>P", opts)
-keymap("v", "<leader>\"", "c\"\"<Esc>P", opts)
-keymap("v", "<leader>{", "c{}<Esc>P", opts)
-keymap("v", "<leader>[", "c[]<Esc>P", opts)
-
 -- Paste and save current clipboard
 keymap("v", "<leader>p", "\"_dP", opts)
 
