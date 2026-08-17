@@ -38,7 +38,10 @@ install_zsh() {
     if [[ "$SHELL" != "$(which zsh)" ]]; then
         chsh -s "$(which zsh)"
     fi
-    echo 'export ZDOTDIR="$HOME/.config/zsh"' > ~/.zshenv
+    printf '%s\n' \
+      'export ZDOTDIR="$HOME/.config/zsh"' \
+      'export PATH="$HOME/.local/bin:$PATH"' \
+      > ~/.zshenv
 
     # Install Oh My Zsh
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

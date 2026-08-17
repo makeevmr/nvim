@@ -1,8 +1,6 @@
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-export PATH="$PATH:$HOME/.local/bin"
-
 ZSH_THEME="gallois"
 
 # Add wisely, as too many plugins slow down shell startup.
