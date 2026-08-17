@@ -19,36 +19,15 @@ y = 0
 history = 50000
 multiplier = 3
 
-[font]
-size = 9
-builtin_box_drawing = false
-
-[font.normal]
-family = "JetBrainsMonoNerdFont"
-style = "Regular"
-
-[font.bold]
-family = "JetBrainsMonoNerdFont"
-style = "Bold"
-
-[font.bold_italic]
-family = "JetBrainsMonoNerdFont"
-style = "Bold Italic"
-
-[font.offset]
-x = 0
-y = 0
-
-[font.glyph_offset]
-x = 0
-y = 0
-
 [selection]
 save_to_clipboard = true
 
 [general]
 live_config_reload = true
-import = ["~/.dotfiles/alacritty/colors.toml"]
+import = [
+    "~/.dotfiles/alacritty/colors.toml",
+    "~/.dotfiles/alacritty/font.toml"
+]
 
 [terminal]
 shell = "/usr/bin/zsh"

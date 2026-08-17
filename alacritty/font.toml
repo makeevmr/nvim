@@ -1,0 +1,23 @@
+[font]
+size = 13
+builtin_box_drawing = false
+
+[font.normal]
+family = "JetBrainsMonoNerdFont"
+style = "Regular"
+
+[font.bold]
+family = "JetBrainsMonoNerdFont"
+style = "Bold"
+
+[font.bold_italic]
+family = "JetBrainsMonoNerdFont"
+style = "Bold Italic"
+
+[font.offset]
+x = 0
+y = 0
+
+[font.glyph_offset]
+x = 0
+y = 0
