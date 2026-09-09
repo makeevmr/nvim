@@ -1,0 +1,81 @@
+{
+    "layer": "top",
+    "position": "top",
+    "modules-left": ["sway/workspaces", "sway/language", "wireplumber", "backlight", "custom/power-profile", "sway/mode"],
+    "modules-center": ["clock"],
+    "modules-right": ["cpu", "temperature", "memory", "disk", "battery", "tray"],
+    "sway/workspaces": {
+        "on-click": "activate"
+    },
+    "sway/language": {
+        "format": "LANG: {shortDescription}",
+        "tooltip-format": "{long}",
+        "on-click": "swaymsg input type:keyboard xkb_switch_layout next"
+    },
+    "wireplumber": {
+        "format": "VOL: {volume}%",
+        "format-muted": "VOL: MUTED",
+        "scroll-step": 5,
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+    },
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "BRIGHT: {percent}%",
+        "scroll-step": 5,
+        "tooltip": false
+    },
+    "custom/power-profile": {
+        "exec": "powerprofilesctl get",
+        "interval": 5,
+        "format": "MODE: {}",
+        "tooltip": false
+    },
+    "clock": {
+        "format": "{:%H:%M %d %b %a}",
+        "locale": "en_GB.UTF-8",
+        "tooltip-format": "{calendar}"
+    },
+    "cpu": {
+        "interval": 10,
+        "format": "CPU: {usage}%",
+        "states": {
+            "warning": 75,
+            "critical": 90
+        },
+    },
+    "temperature": {
+        "interval": 10,
+        "format": "TEMP: {temperatureC}°C",
+        "states": {
+            "warning": 70,
+            "critical": 90
+        }
+    },
+    "memory": {
+        "interval": 30,
+        "format": "RAM: {avail:0.1f}GiB",
+        "states": {
+            "warning": 75,
+            "critical": 90
+        },
+    },
+    "disk": {
+        "interval": 30,
+        "format": "DISK: {free}",
+        "states": {
+            "warning": 75,
+            "critical": 90
+        }
+    },
+    "battery": {
+        "interval": 60,
+        "format": "BAT: {capacity}%",
+        "states": {
+            "warning": 25,
+            "critical": 10
+        },
+    },
+    "tray": {
+        "spacing": 8
+    }
+}
